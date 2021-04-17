@@ -23,5 +23,7 @@
     "InputFullName": "أدخل الاسم رباعي",
     "InputMobile": "أدخل الموبايل",
     "AnotherNotes": "ملاحظات أخرى",
-    "BookConfirm": "تأكيد الحجز"
+    "BookConfirm": "تأكيد الحجز",
+    "Users": "المستخدمين",
+    "AddNewUser": "إضافة مستخدم جديد"
 }

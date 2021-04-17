@@ -10,8 +10,6 @@ import Default from './Layout/Wrappers/baseLayout.vue';
 import Pages from './Layout/Wrappers/pagesLayout.vue';
 import Apps from './Layout/Wrappers/appLayout.vue';
 
-Vue.config.productionTip = false;
-
 Vue.use(BootstrapVue);
 
 Vue.component('default-layout', Default);
@@ -38,10 +36,28 @@ import localeAr from './language/element-ui/locale/ar.js'
 import ElementUI from 'element-ui';
 Vue.use(ElementUI, { localeAr });
 
+import store from './store/store'
+import Vuesax from 'vuesax'
+Vue.use(Vuesax, {});
+
+
+// axios
+import axios from './axios.js'
+Vue.prototype.$http = axios;
+window.server_url = window.location.protocol + "//" + window.location.hostname + ":8000";
+window.axios = axios;
+
+let token = localStorage.getItem("token") || null;
+window.axios.defaults.headers.common = { 'Authorization': `Bearer ${token}` }
+/* **************************************************************** */
+Vue.config.productionTip = false
+
+
 new Vue({
   el: '#app',
   router,
   template: '<App/>',
   i18n,
+  store,
   components: { App }
 });
