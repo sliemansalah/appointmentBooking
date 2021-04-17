@@ -1,0 +1,128 @@
+:root {
+    --gold: #C09300;
+    --black: #000;
+}
+@font-face {
+    font-family: dinNext;
+    src: url('/assets/app/fonts/din-next-lt-w23.ttf');
+}
+
+#bookingHome {
+    direction: rtl;
+    text-align: right;
+    .header {
+        width: 100%;
+        height: 160px;
+        margin-top: -10px;
+        background: url('/assets/app/images/header.png');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .nav-link {
+        background: #fff;
+        font-weight: normal;
+        padding: 10px 20px;
+        margin: 5px;
+        border-radius: 10px;
+        color: #aaa;
+        font-size: 12px;
+    }
+    .nav-link:hover,
+    .nav-link.active {
+        background: var(--gold);
+        color: #fff;
+    }
+    @media (min-width: 1200px) {
+        .container {
+            max-width: 970px;
+        }
+        .card {
+            margin-top: -50px;
+            border-radius: 10px;
+            padding: 0.5rem 0;
+        }
+        .card-body {
+            padding: 0.3rem 0;
+        }
+        .block2 {
+            padding-top: 5px;
+        }
+        .block1, .block3 {
+            padding-top: 15px;
+        }
+    }
+
+}
+
+
+.textCaptilaize {
+    text-transform: capitalize;
+}
+.textUpper {
+    text-transform: uppercase;
+}
+.textLower {
+    text-transform: lowercase;
+}
+.goldColor {
+    color: var(--gold);
+}
+.fontDinNext {
+    font-family: dinNext;
+}
+.font500 {
+    font-weight: 500;
+}
+.font600 {
+    font-weight: 600;
+}
+.font700 {
+    font-weight: 700;
+}
+.font800 {
+    font-weight: 800;
+}
+.font900 {
+    font-weight: 900;
+}
+.size11 {
+    font-size: 11px;
+}
+.size12{
+    font-size: 12px;
+}
+.size13{
+    font-size: 13px;
+}
+.size14{
+    font-size: 14px;
+}
+.size15 {
+    font-size: 15px;
+}
+.size16 {
+    font-size: 16px;
+}
+.size28 {
+    font-size: 28px;
+}
+
+.height12 {
+    height: 12px;
+}
+
+.gold.lighten-1 {
+    background-color: var(--gold) !important;
+    border-color: var(--gold) !important
+}
+.v-date-picker-title__date {
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+}
+.ml90 {
+    margin-left: 90px;
+    font-size: 16px;
+    color: var(--black);
+}
