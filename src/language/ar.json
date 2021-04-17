@@ -8,5 +8,20 @@
     "ImportantDocs": "وثائق هامة",
     "News":"الأخبار",
     "AppointmentBooking": "حجز موعد",
-    "ContactUs": "اتصل بنا"
+    "ContactUs": "اتصل بنا",
+    "BookingInformation": "الرجاء إدخال البيانات الشخصية لتأكيد الحجز",
+    "FullName": "الاسم رباعي",
+    "MobileNumber": "رقم الموبايل",
+    "EscortsCount": "عدد المرافقين",
+    "Email": "البريد الإلكتروني",
+    "TransactionsCount": "عدد المعاملات",
+    "TransactionsType": "نوع المعاملات",
+    "SelectTransactionsType": "اختر المعاملات التي تود إنجازها",
+    "InputTransactionsCount": "أدخل عدد المعاملات التي تود إنجازها",
+    "InputEscortsCount": "أدخل عدد الأشخاص الذين سيكونون معك",
+    "InputEmail": "أدخل البريد الإلكتروني",
+    "InputFullName": "أدخل الاسم رباعي",
+    "InputMobile": "أدخل الموبايل",
+    "AnotherNotes": "ملاحظات أخرى",
+    "BookConfirm": "تأكيد الحجز"
 }

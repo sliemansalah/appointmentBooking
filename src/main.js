@@ -32,6 +32,12 @@ Vue.use(VeeValidate, {
    en:english
   }
 });
+
+import 'element-ui/lib/theme-chalk/index.css';
+import localeAr from './language/element-ui/locale/ar.js'
+import ElementUI from 'element-ui';
+Vue.use(ElementUI, { localeAr });
+
 new Vue({
   el: '#app',
   router,

@@ -34,14 +34,19 @@
         </b-nav>
         <AppointmentBooking />
     </div>
+    <div class="container mt-4">
+       <AppointmentAddEdit />
+    </div>
   </div>
 </template>
 
 <script>
 import AppointmentBooking from './AppointmentBooking';
+import AppointmentAddEdit from './AppointmentAddEdit';
 export default {
     components: {
-        AppointmentBooking
+        AppointmentBooking,
+        AppointmentAddEdit
     }
 };
 </script>

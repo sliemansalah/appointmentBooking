@@ -1,6 +1,8 @@
 :root {
     --gold: #C09300;
     --black: #000;
+    --white: #fff;
+    --red: red
 }
 @font-face {
     font-family: dinNext;
@@ -52,7 +54,6 @@
             padding-top: 15px;
         }
     }
-
 }
 
 
@@ -67,6 +68,9 @@
 }
 .goldColor {
     color: var(--gold);
+}
+.blackColor {
+    color: var(--black);
 }
 .fontDinNext {
     font-family: dinNext;
@@ -125,4 +129,53 @@
     margin-left: 90px;
     font-size: 16px;
     color: var(--black);
+}
+
+::placeholder {
+    color: #C0C4CC !important;
+}
+.form-control {
+    height: 40px;
+}
+.form-control {
+    color: var(--gold) !important;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+
+
+.bookConfirmButton {
+    width:100%;
+    height:40px;
+    background: var(--gold) !important;
+    color: #fff;
+    border: 1px solid var(--gold);
+}
+
+.el-select-dropdown__item{
+    text-align: right;
+}
+
+.el-tag.el-tag--info {
+    background-color: var(--gold) !important;
+    border-color: var(--gold) !important;
+    color: #fff !important;
+    margin: 4px 4px 0px 6px !important;
+}
+.el-select .el-tag__close.el-icon-close {
+    right: 7px !important;
+    background-color: var(--gold) !important;
+    color:  var(--white) !important;
+}
+.el-select .el-tag__close.el-icon-close:hover {
+    color: var(--red) !important;
+}
+.el-select-dropdown.is-multiple .el-select-dropdown__item.selected {
+    background-color: var(--gold) !important;
+    color:  var(--white) !important;
+}
+.el-select-dropdown.is-multiple .el-select-dropdown__item.selected::after {
+    right: unset !important;
+    left: 20px;
 }
