@@ -9,7 +9,8 @@
                             <span id="addWrapper">
                                 <button  class="btn mb-2 btn-transition btn-outline-primary"  
                                 @click='addNew()'>
-                                    <i class="btn-icon-wrapper lnr-plus-circle"></i> {{$t("AddNew")}}
+                                    {{$t("AddNew")}}
+                                    <i class="btn-icon-wrapper lnr-plus-circle"></i>
                                 </button>
                             </span>
                         </div>
@@ -18,14 +19,16 @@
                                 <input type="text" name="name" class="form-control" v-model="filter" :placeholder="$t('TypeToSearch')">
                             <div class="input-group-append">
                                 <button type="button" class="btn btn-icon btn-secondary" @click="filter = ''">
-                                <i class="btn-icon-wrapper lnr-redo"></i>
                                 {{$t("Clear")}}
+                                <i class="btn-icon-wrapper lnr-redo"></i>
                                 </button>
                             </div>
                             </div>
                         </div>
                     </div>
-                     <b-table show-empty 
+                     <b-table
+                            class="mt-3"
+                            show-empty 
                             :empty-filtered-text="$t('emptyTable')"
                             :empty-text="$t('emptyTable')"
                             stacked="md"

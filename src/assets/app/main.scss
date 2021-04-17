@@ -179,3 +179,17 @@
     right: unset !important;
     left: 20px;
 }
+
+body {
+    direction: rtl;
+    text-align: right;
+}
+
+.app-main__outer {
+ padding-left: unset !important;
+ padding: 60px 0 280px 0px;
+ padding-right: 230px;   
+}
+.app-sidebar {
+    width: 230px;
+}

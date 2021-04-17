@@ -16,7 +16,7 @@
             </transition>
         </div>
         <!-- Modal Component -->
-        <b-modal id="modal1" title="Bootstrap-Vue">
+        <!-- <b-modal id="modal1" title="Bootstrap-Vue">
             <p class="my-4">Hello from modal!</p>
         </b-modal>
         <b-modal id="modallg" size="lg" title="Large Modal">
@@ -73,7 +73,7 @@
                     </div>
                 </VuePerfectScrollbar>
             </div>
-        </div>
+        </div> -->
     </div>
     </v-app>
 </template>

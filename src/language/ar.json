@@ -25,5 +25,16 @@
     "AnotherNotes": "ملاحظات أخرى",
     "BookConfirm": "تأكيد الحجز",
     "Users": "المستخدمين",
-    "AddNewUser": "إضافة مستخدم جديد"
+    "AddNewUser": "إضافة مستخدم جديد",
+    "BookingSystem": "نظام الحجوزات",
+    "AddNew": "إضافة جديد",
+    "Clear": "تفريغ",
+    "TypeToSearch": "اكتب للبحث ...",
+    "CreatedAt": "تاريخ الإنشاء",
+    "emptyTable": "لا يوجد بيانات",
+    "Login": "تسجيل دخول",
+    "WelcomeBack": "مرحبًا بعودتك",
+    "signInAcoountBelow": "من فضلك قم بإدخال بياناتك لتسجيل الدخول",
+    "Password": "كلمة المرور",
+    "Name": "الاسم"
 }
