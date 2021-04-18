@@ -44,5 +44,17 @@
     "Details": "تفاصيل",
     "Close": "إغلاق",
     "Save": "حفظ",
-    "Services": "الخدمات"
+    "Services": "الخدمات",
+    "User": "المستخدم",
+    "AsToday": "حسب اليوم",
+    "AsMonth": "حسب الشهر",
+    "Today": "اليوم",
+    "Appointments": "الحجوزات",
+    "AddNewBook": "إضافة حجز جديد",
+    "Date": "التاريخ",
+    "FromTime": "من وقت",
+    "ToTime": "إلى وقت",
+    "AppointmentsTable": "جدول الحجوزات",
+    "GetData": "جلب البيانات",
+    "GetDataFailed": "فشلت عملية جلب البيانات"
 }

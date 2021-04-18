@@ -16,6 +16,17 @@ export default new Router({
             name: 'users',
             component: () => import('../Pages/Users/UsersPage.vue'),
         },
+        {
+            path: '/admin/appointments',
+            name: 'appointments',
+            component: () => import('../Pages/Appointments/AppointmentsPage.vue'),
+        },
+
+        {
+            path: '/admin/appointments-table',
+            name: 'appointments-table',
+            component: () => import('../Pages/AppointmentsTable/AppointmentsTablePage.vue'),
+        },
 
         {
             path: '/',

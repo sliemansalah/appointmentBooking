@@ -8,6 +8,14 @@
     font-family: dinNext;
     src: url('/assets/app/fonts/din-next-lt-w23.ttf');
 }
+@font-face {
+    font-family: cairo;
+    src: url('/assets/app/fonts/cairo.ttf');
+}
+
+body {
+    font-family: cairo;
+}
 
 #bookingHome {
     direction: rtl;
@@ -73,7 +81,7 @@
     color: var(--black);
 }
 .fontDinNext {
-    font-family: dinNext;
+    font-family: dinNext !important;
 }
 .font500 {
     font-weight: 500;
@@ -227,4 +235,14 @@ body {
 }
 .page-link {
     color: var(--gold) !important;
+}
+
+.modal-header .close {
+    position: absolute;
+    left: 0;
+}
+.el-notification__closeBtn {
+    position: absolute;
+    right: unset !important;
+    left: 10px;
 }

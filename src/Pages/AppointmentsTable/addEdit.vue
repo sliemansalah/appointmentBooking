@@ -2,7 +2,7 @@
     <form ref="form" @submit.stop.prevent="saveAddEdit">
         
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-6">
                 <div class="form-group" 
                     :class="{'has-error':errors.has('addEditValidation.name')}"
                 >

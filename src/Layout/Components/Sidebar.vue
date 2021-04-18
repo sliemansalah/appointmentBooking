@@ -3,7 +3,8 @@
     @mouseover="toggleSidebarHover('add','closed-sidebar-open')" 
     @mouseleave="toggleSidebarHover('remove','closed-sidebar-open')">
         <div class="app-header__logo">
-            <h4>{{$t('BookingSystem')}}</h4>
+            <h4 class="mt-2 mr-2">{{$t('BookingSystem')}}</h4>
+            <img class="mr-2" width="20" height="20" src="/assets/images/favicon.png" alt="">
             <!-- <div class="logo-src"/> -->
             <!-- <div class="header__pane ml-auto">
                 <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" 
@@ -42,6 +43,16 @@
                         title: this.$t('Services'),
                         icon: 'pe-7s-users',
                         href: '/admin/services',
+                    },
+                    {
+                        title: this.$t('Appointments'),
+                        icon: 'pe-7s-users',
+                        href: '/admin/appointments',
+                    },
+                    {
+                        title: this.$t('AppointmentsTable'),
+                        icon: 'pe-7s-users',
+                        href: '/admin/appointments-table',
                     },
                     {
                         title: this.$t('Users'),
