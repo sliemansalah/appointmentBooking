@@ -1,0 +1,31 @@
+.btn-lg.btn-login {
+  padding: 0.5rem 3rem;
+}
+
+label.required {
+  color: $danger;
+}
+
+.form-group.has-error {
+  color: $danger;
+  .form-control {
+    border-color: $danger;
+  }
+}
+
+body .normal-flag {
+  margin-left: -16px !important;
+  margin-right: -16px !important;
+}
+
+.field-value-ltr {
+  direction: ltr;
+  text-align: right;
+}
+.column-value-ltr {
+  direction: ltr;
+}
+.datetime-field-value-ltr .el-date-editor--datetime input[type="text"] {
+  direction: ltr;
+  text-align: right;
+}

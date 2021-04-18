@@ -24,10 +24,16 @@ export default new Router({
             component: () => import('../Pages/Home/HomePage.vue'),
         },
         {
-            path: '/login',
+            path: '/admin/login',
             name: 'login',
             meta: {layout: 'userpages'},
-            component: () => import('../DemoPages/UserPages/LoginBoxed.vue'),
-    },
+            component: () => import('../Pages/Login/LoginPage.vue'),
+        },
+        {
+            path: '/admin/services',
+            name: 'services',
+            component: () => import('../Pages/Services/ServicesPage.vue'),
+        },
+        
     ]
 })

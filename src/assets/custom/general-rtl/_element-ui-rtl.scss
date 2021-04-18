@@ -1,0 +1,188 @@
+body .el-date-editor.el-input,
+body .el-date-editor.el-input__inner,
+body .el-select {
+    width: 100%;
+}
+
+body .el-input--suffix .el-input__inner {
+    padding-right: 15px;
+    padding-left: 30px;
+}
+
+body .el-input__suffix {
+    left: 5px;
+    right: auto;
+}
+
+body .el-scrollbar__bar {
+    left: 2px;
+    right: auto;
+}
+
+body .el-scrollbar__wrap {
+    margin-left: -17px;
+    margin-right: 0;
+}
+
+.form-group.has-error {
+    color: $danger;
+    .el-input .el-input__inner,
+    .el-range-editor.el-input__inner {
+        border-color: $danger;
+    }
+}
+.has-warning-value{
+    .el-input__inner {
+   color: $danger;
+}
+}
+
+body .el-input__inner {
+    height: 33px !important;
+}
+
+body .el-input__icon {
+    line-height: 33px;
+}
+
+body .el-select-dropdown__item {
+    padding: 0 40px 0 20px;
+}
+
+body .el-message__closeBtn {
+    left: 15px;
+    right: auto;
+}
+
+//confirm
+body .el-message-box__btns button:nth-child(1) {
+    // margin-left: 0;
+    margin-right: 10px;
+    float: left;
+}
+
+body .el-message-box__btns button:nth-child(2) {
+    // margin-left: 0;
+    // margin-right: 10px;
+    float: left;
+}
+
+body .el-message-box__btns {
+    text-align: left;
+}
+
+body .el-message-box__status+.el-message-box__message {
+    padding-left: 12px;
+    padding-right: 36px;
+}
+
+body .el-message-box {
+    text-align: right;
+}
+
+body .el-message-box__headerbtn {
+    left: 15px;
+    right: auto;
+}
+
+//notification
+body .el-notification__closeBtn {
+    left: 15px;
+    right: auto;
+}
+
+body .el-notification__group {
+    margin-right: 13px;
+}
+
+body .el-notification.top-center {
+    right: 50%;
+    margin-right: -165px; // half of width
+    .el-notification__content {
+        p {
+            word-break: break-word;
+        }
+    }
+}
+
+.el-date-editor .el-range-separator {
+    width: 12%;
+}
+
+.el-picker-panel__icon-btn el-date-picker__prev-btn el-icon-d-arrow-left {
+    float: right !important;
+}
+
+// start date picker
+body {
+    .el-date-picker__prev-btn {
+        float: right;
+    }
+    .el-date-picker__next-btn {
+        float: left;
+    }
+    .el-icon-d-arrow-left:before {
+        content: "\E613";
+    }
+    .el-icon-arrow-left:before {
+        content: "\E604";
+    }
+    .el-icon-d-arrow-right:before {
+        content: "\E610";
+    }
+    .el-icon-arrow-right:before {
+        content: "\E600";
+    }
+    .el-date-range-picker__content {
+        float: right;
+    }
+    .el-date-range-picker__header [class*=arrow-left] {
+        float: right;
+    }
+    .el-date-range-picker__header [class*=arrow-right] {
+        float: left;
+    }
+    .el-picker-panel__footer {
+        text-align: left;
+    }
+    .el-button+.el-button {
+        margin-right: 10px;
+        margin-left: 0;
+    }
+}
+
+// end date picker
+body .el-select .el-tag {
+    margin: 2px 6px 2px 0;
+}
+
+body .el-select .el-tag__close.el-icon-close {
+    left: -7px;
+    right: auto;
+}
+
+body .el-tag .el-icon-close {
+    left: -5px;
+    right: auto;
+}
+
+body .el-select-dropdown.is-multiple .el-select-dropdown__item.selected::after {
+    left: 20px;
+    right: auto;
+}
+
+body .el-select__input {
+    margin-right: 15px;
+}
+
+body .el-time-spinner {
+    direction: ltr;
+}
+
+
+
+.el-tree-node__content>.el-checkbox{
+    margin-bottom: 0;
+    margin-right: 0;
+    margin-left: 8px;
+}

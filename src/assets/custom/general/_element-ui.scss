@@ -1,0 +1,77 @@
+body .el-date-editor.el-input,
+body .el-date-editor.el-input__inner,
+body .el-select {
+    width: 100%;
+}
+
+//notification
+body .el-notification.top-center {
+    right: 50%;
+    margin-right: -165px; // half of width
+    .el-notification__content {
+        p {
+            word-break: break-word;
+        }
+    }
+}
+
+.form-group.has-error {
+    color: $danger;
+    .el-input .el-input__inner,
+    .el-range-editor.el-input__inner {
+        border-color: $danger;
+    }
+}
+
+.has-warning-value{
+     .el-input__inner {
+    color: $danger;
+}
+}
+
+.el-date-editor .el-range-separator {
+    width: 12%;
+}
+
+//confirm
+body .el-message-box__btns button:nth-child(1) {
+    margin-right: 0;
+    margin-left: 10px;
+    float: right;
+}
+
+body .el-message-box__btns button:nth-child(2) {
+    margin-right: 0;
+    margin-left: 0;
+    float: right;
+}
+
+
+.el-tree-node__content>.el-checkbox{
+    margin-bottom: 0;
+}
+
+
+body .el-input__inner {
+    height: 33px !important;
+}
+
+body .el-input__icon {
+    line-height: 33px;
+}
+body .el-message-box__message p{
+    margin-bottom: 0;
+}
+body .el-message-box .el-button--mini,body .el-message-box .el-button--small{
+    font-size: 12px;
+    line-height: 12px;
+    border-radius: 3px;
+}
+
+.el-button--mini{
+    font-size: 12px;
+    line-height: 12px;
+}
+body .el-select-dropdown__wrap{
+    max-width: 700px;   
+}

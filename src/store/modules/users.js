@@ -30,6 +30,7 @@ const actions = {
     return new Promise((resolve, reject) => {
        let form = new FormData();
        if( data.name) form.append('name', data.name);
+       if( data.email) form.append('email', data.email);
       window.axios.post(window.server_url + `/api/admin/user`, form)
         .then((response) => {
           resolve(response.data);
@@ -44,6 +45,7 @@ const actions = {
     return new Promise((resolve, reject) => {
        let form = new FormData();
        if( data.name) form.append('name', data.name);
+       if( data.email) form.append('email', data.email);
       window.axios.post(window.server_url + `/api/admin/user/${data.id}/update`, form)
         .then((response) => {
           resolve(response.data);

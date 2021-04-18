@@ -1,0 +1,146 @@
+.c-mr-0 {
+  margin-left: 0 !important;
+}
+.c-ml-0{
+  margin-right: 0 !important;
+}
+
+.c-mr-1 {
+    margin-left: 0.25rem !important;
+  }
+  .c-ml-1{
+    margin-right: 0.25rem !important;
+  }
+
+  .c-mr-2 {
+    margin-left: 0.5rem !important;
+  }
+  .c-ml-2{
+    margin-right: 0.5rem !important;
+  }
+
+  .c-mr-3 {
+    margin-left: 1rem !important;
+  }
+  .c-ml-3{
+    margin-right: 1rem !important;
+  }
+
+  .c-mr-4 {
+    margin-left: 1.5rem !important;
+  }
+  .c-ml-4{
+    margin-right: 1.5rem !important;
+  }
+
+  .c-mr-5 {
+    margin-left: 3rem !important;
+  }
+  .c-ml-5{
+    margin-right: 3rem !important;
+  }
+
+  .c-ml-auto{
+    margin-right: auto !important;
+  }
+
+
+  .c-pr-0 {
+    padding-left: 0 !important;
+  }
+  .c-pl-0{
+    padding-right: 0 !important;
+  }
+  
+  .c-pr-1 {
+    padding-left: 0.25rem !important;
+    }
+    .c-pl-1{
+        padding-right: 0.25rem !important;
+    }
+  
+    .c-pr-2 {
+        padding-left: 0.5rem !important;
+    }
+    .c-pl-2{
+        padding-right: 0.5rem !important;
+    }
+  
+    .c-pr-3 {
+        padding-left: 1rem !important;
+    }
+    .c-pl-3{
+        padding-right: 1rem !important;
+    }
+  
+    .c-pr-4 {
+        padding-left: 1.5rem !important;
+    }
+    .c-pl-4{
+        padding-right: 1.5rem !important;
+    }
+  
+    .c-pr-5 {
+        padding-left: 3rem !important;
+    }
+    .c-pl-5{
+        padding-right: 3rem !important;
+    }
+    // .c-float-left {
+    //     float: right !important;
+    //   }
+      
+    //   .c-float-right {
+    //     float: left !important;
+    //   }
+
+
+
+.c-mr-auto,
+.c-mx-auto{
+    margin-left: auto !important;
+}
+.ml-auto,
+.c-mx-auto{
+  margin-right: auto !important;
+}
+
+
+//start charts ovveride existing
+.apexcharts-legend-marker{
+    margin-right: 0;
+    margin-left: 3px;
+}
+
+//end charts
+
+//start tables
+.action-column{
+    text-align: center;
+}
+//end tables
+
+.limited-height-menu + .dropdown-menu {
+	height: 200px !important;
+	overflow-x: auto;
+}
+
+.app-main__outer{
+  z-index: unset;
+}
+
+
+@media (max-width: 768px){
+  .c-ml-sm-2{
+    margin-right: 0.5rem !important;
+  }
+}
+
+
+.shadow-tabs .tab-item-active:hover,.shadow-tabs .tab-item-active{
+  background: #004996;//#587BC9;
+  border-radius: 0.25rem;
+}
+.shadow-tabs .tab-item-line{
+  display: none !important;
+}

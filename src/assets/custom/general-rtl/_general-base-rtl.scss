@@ -1,0 +1,26 @@
+
+@font-face {
+    font-family: 'DroidArabicKufi';
+    src: url('/DroidArabicKufi.eot?#iefix') format('embedded-opentype')
+    ,  url('/DroidArabicKufi.woff') format('woff'), url('/DroidArabicKufi.ttf')  format('truetype'), url('/DroidArabicKufi.svg#DroidArabicKufi') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+
+
+// @font-face {
+//     font-family: 'DroidArabicKufi';
+//     src: url('/DroidArabicKufi-Bold.eot?#iefix') format('embedded-opentype'),  url('/DroidArabicKufi-Bold.woff') format('woff'), url('/DroidArabicKufi-Bold.ttf')  format('truetype'), url('/DroidArabicKufi-Bold.svg#DroidArabicKufi-Bold') format('svg');
+//     font-weight: bold;
+//     font-style: normal;
+//   }
+  
+body,html,*{
+    font-family: 'DroidArabicKufi';
+}
+
+@import "element-ui-rtl";
+@import "bootstrap-ovveride-rtl";
+@import "custom-rtl";
+@import "general-rtl";

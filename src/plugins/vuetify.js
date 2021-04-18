@@ -1,11 +1,17 @@
 import Vue from 'vue'
 import Vuetify from 'vuetify/lib'
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
-import 'vuetify/src/stylus/app.styl'
+import 'vuetify/src/stylus/app.styl'// loooook it use bootstrap LTR, so it case issue in RTL. abdalhadi 2-9-2019.
+
+
+let currentLangDirRTL=false;
+
 
 Vue.use(Vuetify, {
+    rtl: currentLangDirRTL,
+    //rtl: false,
     theme: {
-        primary: '#f6ad8',
+        primary: '#f6ad81',
         secondary: '#444054',
         accent: '#794c8a',
         error: '#d92550',
@@ -18,3 +24,4 @@ Vue.use(Vuetify, {
     },
     iconfont: 'md' || 'mdi',
 })
+

@@ -36,5 +36,13 @@
     "WelcomeBack": "مرحبًا بعودتك",
     "signInAcoountBelow": "من فضلك قم بإدخال بياناتك لتسجيل الدخول",
     "Password": "كلمة المرور",
-    "Name": "الاسم"
+    "Name": "الاسم",
+    "Actions": "العمليات",
+    "Edit": "تعديل",
+    "Delete": "حذف",
+    "Copy": "نسخ",
+    "Details": "تفاصيل",
+    "Close": "إغلاق",
+    "Save": "حفظ",
+    "Services": "الخدمات"
 }

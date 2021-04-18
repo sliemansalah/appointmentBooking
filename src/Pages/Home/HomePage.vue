@@ -21,16 +21,16 @@
     
     <div class="container">
         <b-nav>
-            <b-nav-item>{{$t('Home')}}</b-nav-item>
-            <b-nav-item>{{$t('Embassy')}}</b-nav-item>
-            <b-nav-item>{{$t('Consulate')}}</b-nav-item>
-            <b-nav-item>{{$t('Palestine')}}</b-nav-item>
-            <b-nav-item>{{$t('Saudia')}}</b-nav-item>
-            <b-nav-item>{{$t('ImportantLinks')}}</b-nav-item>
-            <b-nav-item>{{$t('ImportantDocs')}}</b-nav-item>
-            <b-nav-item>{{$t('News')}}</b-nav-item>
+            <b-nav-item href="http://www.palestineembassy.org.sa/index.html" target="_blank">{{$t('Home')}}</b-nav-item>
+            <b-nav-item href="http://www.palestineembassy.org.sa/Ar_Embassy.htm" target="_blank">{{$t('Embassy')}}</b-nav-item>
+            <b-nav-item href="http://www.palestineembassy.org.sa/Ar_consulate.htm" target="_blank">{{$t('Consulate')}}</b-nav-item>
+            <b-nav-item href="http://www.palestineembassy.org.sa/Ar_Palestine.htm" target="_blank">{{$t('Palestine')}}</b-nav-item>
+            <b-nav-item href="http://www.palestineembassy.org.sa/Ar_saudi.htm" target="_blank">{{$t('Saudia')}}</b-nav-item>
+            <b-nav-item href="http://www.palestineembassy.org.sa/Ar_Usefullinks.htm" target="_blank">{{$t('ImportantLinks')}}</b-nav-item>
+            <b-nav-item href="http://www.palestineembassy.org.sa/Ar_Documents.htm" target="_blank">{{$t('ImportantDocs')}}</b-nav-item>
+            <b-nav-item href="http://www.palestineembassy.org.sa/Ar_news.htm" target="_blank">{{$t('News')}}</b-nav-item>
             <b-nav-item active>{{$t('AppointmentBooking')}}</b-nav-item>
-            <b-nav-item>{{$t('ContactUs')}}</b-nav-item>
+            <b-nav-item href="http://www.palestineembassy.org.sa/Ar_contact_us.htm" target="_blank">{{$t('ContactUs')}}</b-nav-item>
         </b-nav>
         <AppointmentBooking />
     </div>

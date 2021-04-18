@@ -39,6 +39,11 @@
                 
                 menu: [
                     {
+                        title: this.$t('Services'),
+                        icon: 'pe-7s-users',
+                        href: '/admin/services',
+                    },
+                    {
                         title: this.$t('Users'),
                         icon: 'pe-7s-users',
                         href: '/admin/users',

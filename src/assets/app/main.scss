@@ -193,3 +193,38 @@ body {
 .app-sidebar {
     width: 230px;
 }
+
+.btn-primary,
+.btn-primary.dropdown-toggle,
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled).active,
+.show > .btn-primary.dropdown-toggle
+{
+    background-color: var(--gold) !important;
+    border-color: var(--gold) !important;
+}
+.v-sidebar-menu .vsm-item.active-item > .vsm-link,
+ .v-sidebar-menu .vsm-link:hover,
+  .app-sidebar.text-lighter .v-sidebar-menu .vsm-item.active-item > .vsm-link,
+   .app-sidebar.text-darker .v-sidebar-menu .vsm-item.active-item > .vsm-link 
+{
+    background: #fff4cf;
+    color: var(--gold) !important;
+}   
+
+.btn-outline-primary {
+    color: var(--gold) !important;
+    border-color: var(--gold) !important;
+}
+.btn-outline-primary:hover {
+    background: var(--gold) !important;
+    color: #fff !important;
+}
+.page-item.active .page-link, .pagination .active.page-number .page-link {
+    background-color: var(--gold) !important;
+    border-color: var(--gold) !important;
+    color: #fff !important;
+}
+.page-link {
+    color: var(--gold) !important;
+}
