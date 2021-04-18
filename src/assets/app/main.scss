@@ -9,12 +9,8 @@
     src: url('/assets/app/fonts/din-next-lt-w23.ttf');
 }
 @font-face {
-    font-family: cairo;
+    font-family: Cairo;
     src: url('/assets/app/fonts/cairo.ttf');
-}
-
-body {
-    font-family: cairo;
 }
 
 #bookingHome {
@@ -245,4 +241,7 @@ body {
     position: absolute;
     right: unset !important;
     left: 10px;
+}
+.el-notification.right {
+    right: 40%;
 }
