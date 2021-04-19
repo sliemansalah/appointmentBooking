@@ -41,17 +41,17 @@
                 menu: [
                     {
                         title: this.$t('Services'),
-                        icon: 'pe-7s-users',
+                        icon: 'pe-7s-server',
                         href: '/admin/services',
                     },
                     {
                         title: this.$t('Appointments'),
-                        icon: 'pe-7s-users',
+                        icon: 'pe-7s-bookmarks',
                         href: '/admin/appointments',
                     },
                     {
                         title: this.$t('AppointmentsTable'),
-                        icon: 'pe-7s-users',
+                        icon: 'pe-7s-notebook',
                         href: '/admin/appointments-table',
                     },
                     {

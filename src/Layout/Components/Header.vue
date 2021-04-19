@@ -1,13 +1,20 @@
 <template>
     <div :class="headerbg" class="app-header header-shadow">
-        <div class="logo-src"/>
+        <!-- <div class="logo-src"/> -->
         <div class="app-header__content">
             <div class="app-header-left">
             </div>
             <div class="app-header-right">
+                <b-button 
+                @click="logout"
+                style="position: absolute;left: 30px;" 
+                variant="danger"
+                class="btn-icon btn-icon-only">
+                {{$t('Logout')}}
+                </b-button>
             </div>
         </div>
-        <div class="app-header__mobile-menu">
+        <!-- <div class="app-header__mobile-menu">
             <div>
                 <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" 
                 :class="{ 'is-active' : isOpen }" @click="toggleMobile('closed-sidebar-open')">
@@ -16,7 +23,7 @@
                     </span>
                 </button>
             </div>
-        </div>
+        </div> -->
         <!-- <div class="app-header__menu">
             <span>
                 <b-button class="btn-icon btn-icon-only" variant="primary" size="sm" v-bind:class="{ 'active' : isOpenMobileMenu }" @click="toggleMobile2('header-menu-open')">
@@ -87,6 +94,25 @@
                     el.classList.remove(className);
                 }
             },
+            logout() {
+              this.$store.dispatch('auth/logout').then(_ => {
+     this.$notify.success({
+          duration: 3000,
+          message: this.$t("LogoutSuccessfully"),
+          title: this.$t("Logout"),
+          customClass: "top-center",
+      }); 
+    })
+    .catch(() => {
+        })   
+    .finally( () => {
+        setTimeout(() => {
+        localStorage.removeItem("token");
+        localStorage.removeItem("user");
+        window.location.href= "/admin/login";
+      }, 500);
+    })
+            }
         }
     };
 </script>

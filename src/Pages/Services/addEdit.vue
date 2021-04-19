@@ -59,7 +59,13 @@ export default {
                     if(this.addEditObj.id>0){
                         this.$store.dispatch("services/updateData", this.addEditObj)
                         .then(_ => {
-                             this.$emit("saveAddEdit"); 
+                            this.$notify.success({
+                                duration: 3000,
+                                message: this.$t("UpdatedSuccessfully"),
+                                title: this.$t("Updated"),
+                                customClass: "top-center",
+                            }); 
+                             this.$emit("saveAddEdit");
                         })
                         .catch(_ => {
                             this.$notify.error({
@@ -73,6 +79,12 @@ export default {
                     else{
                         this.$store.dispatch("services/saveData", this.addEditObj)
                         .then(_ => {
+                            this.$notify.success({
+                                duration: 3000,
+                                message: this.$t("AddedSuccessfully"),
+                                title: this.$t("Added"),
+                                customClass: "top-center",
+                            }); 
                              this.$emit("saveAddEdit"); 
                         })
                         .catch(_ => {

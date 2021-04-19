@@ -1,18 +1,23 @@
 <template>
     <div>
-        <h4>{{$t('Appointments')}}</h4>
+        <h4 class="goldColor">{{$t('Appointments')}}</h4>
         <div class="main-card mt-3 card">
             <div class="card-body">
                 <div>
                     <div class="row">
                         <div class="col-md-6">
                         </div>
-                        <div class="col-md-6">
+                          <div class="col-md-6">
                             <div  class="input-group input-group">
-                                <input type="text" name="name" class="form-control" v-model="filter" :placeholder="$t('TypeToSearch')">
+                                <input type="text" 
+                                name="name" 
+                                class="form-control" 
+                                v-model="filter" :placeholder="$t('TypeToSearch')">
                             <div class="input-group-append">
-                                <button type="button" class="btn btn-icon btn-secondary" @click="filter = ''">
-                                    {{$t("Clear")}}
+                                <button type="button" 
+                                class="btn btn-icon btn-secondary" 
+                                @click="filter = ''">
+                                    <i class="pe-7s-refresh"></i>
                                 </button>
                             </div>
                             </div>
@@ -35,7 +40,7 @@
                             :sort-by.sync="sortBy"
                             :sort-desc.sync="sortDesc"
                             :sort-direction="sortDirection"
-                            @filtered="onFiltered">
+                            >
                         <template v-slot:cell(actions)="row" >
                                     <b-button variant="success" 
                                         @click='detailsRow(row.item)'>
@@ -142,10 +147,6 @@
                     })
                     
                 })
-            },
-            onFiltered(filteredItems) {
-                this.pagination.currentPage = 1;
-                this.items = filteredItems;
             },
             initData() {
                 this.$store

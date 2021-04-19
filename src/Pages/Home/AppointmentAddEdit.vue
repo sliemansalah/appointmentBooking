@@ -125,11 +125,37 @@ methods: {
     addBooking() {
         this.inputs.start_time = this.startTime;
         this.inputs.finish_time = this.endTime;
-        this.$store.dispatch('appointments/saveData2', this.inputs).then(res => {
-            console.log(res);
-        }).catch(err => {
-
-        });
+        this.$store.dispatch('appointments/saveData2', this.inputs).then(_ => {
+             this.$notify.success({
+                duration: 3000,
+                message: this.$t("BookingSuccessfully"),
+                title: this.$t("Booking"),
+                customClass: "top-center",
+             }); 
+             this.clearData();
+        }).catch(_ => {
+            this.$notify.error({
+                duration: 3000,
+                message: this.$t("WrongOrMissedData"),
+                title: this.$t("Error"),
+                customClass: "top-center",
+            }); 
+        }); 
+    },
+    clearData() {
+        this.startTime= '';
+        this.endTime= '';
+        this.inputs= {
+            name: '',
+            mobile: '',
+            email: '',
+            person_number: '',
+            transaction_number: '',
+            services: '',
+            comments: '',
+            start_time: '',
+            finish_time: '',
+        };
     },
     initData() {
          this.$store

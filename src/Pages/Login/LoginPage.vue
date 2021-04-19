@@ -3,7 +3,7 @@
         <div class="h-100 bg-plum-plate bg-animation">
             <div class="d-flex h-100 justify-content-center align-items-center">
                 <b-col md="8" class="mx-auto app-login-box">
-                    <h3 class="text-center">{{$t('BookingSystem')}}</h3>
+                    <h2 class="text-center goldColor">{{$t('BookingSystem')}}</h2>
                     <div class="modal-dialog w-100 mx-auto">
                         <div class="modal-content">
                             <div class="modal-body">
@@ -62,7 +62,12 @@ export default{
   methods: {
      login() {
     this.$store.dispatch('auth/login', this.inputs).then(res => {
-      alert('LoginSuccessfully')
+     this.$notify.success({
+          duration: 3000,
+          message: this.$t("LoginSuccessfully"),
+          title: this.$t("Login"),
+          customClass: "top-center",
+      }); 
       setTimeout(() => {
         localStorage.setItem("token", res.data.token);
         localStorage.setItem("user", JSON.stringify(res.data));
@@ -70,7 +75,12 @@ export default{
       }, 500);
     })
     .catch(() => {
-      alert('LoginFailed')
+     this.$notify.success({
+          duration: 3000,
+          message: this.$t("LoginFailed"),
+          title: this.$t("Login"),
+          customClass: "top-center",
+      }); 
     })
   },
   }

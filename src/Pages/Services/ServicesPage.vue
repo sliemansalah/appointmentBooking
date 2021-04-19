@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h4>{{$t('Services')}}</h4>
+        <h4 class="goldColor">{{$t('Services')}}</h4>
         <div class="main-card mt-3 card">
             <div class="card-body">
                 <div>
@@ -15,10 +15,18 @@
                         </div>
                         <div class="col-md-6">
                             <div  class="input-group input-group">
-                                <input type="text" name="name" class="form-control" v-model="filter" :placeholder="$t('TypeToSearch')">
+                                <input type="text" 
+                                name="name" 
+                                class="form-control" 
+                                v-model="filter"
+                                @keyup="onFiltered(filter)" 
+                                :placeholder="$t('TypeToSearch')">
                             <div class="input-group-append">
-                                <button type="button" class="btn btn-icon btn-secondary" @click="filter = ''">
-                                    {{$t("Clear")}}
+                                <button type="button" 
+                                class="btn btn-icon btn-secondary" 
+                                @click="filter = ''"
+                                >
+                                    <i class="pe-7s-refresh"></i>
                                 </button>
                             </div>
                             </div>
@@ -26,22 +34,21 @@
                     </div>
                      <b-table 
                             class="mt-3"
-                            show-empty 
                             :empty-filtered-text="$t('emptyTable')"
                             :empty-text="$t('emptyTable')"
                             stacked="md"
                             :bordered="true"
                             :striped="true"
-                            :items="items"
+                            :items="itemsFiltered"
+                            :fields="fields"
                             :current-page="pagination.currentPage"
                             :per-page="pagination.perPage"
-                            :fields="fields"
                             :filter="filter"
                             :filterIncludedFields="filterOn"
                             :sort-by.sync="sortBy"
                             :sort-desc.sync="sortDesc"
                             :sort-direction="sortDirection"
-                            @filtered="onFiltered">
+                            >
                         <template v-slot:cell(actions)="row" >
                             <b-dropdown no-flip :text='$t("Actions")' class="" variant="primary">
                                 <span :id="'editWrapper'+row.index">
@@ -73,7 +80,8 @@
                     </b-table>
                     <div class="row">
                         <div class="col-md-6">
-                                <b-pagination v-model="pagination.currentPage"
+                                <b-pagination 
+                                v-model="pagination.currentPage"
                                 :total-rows="totalRowsGeneral"
                                 :per-page="pagination.perPage"
                                 v-if="totalPagesGeneral>1"
@@ -113,6 +121,7 @@
         data() {
             return {
                 items: [],
+                itemsFiltered: [],
                 fields: [
                     { key: 'name', label: this.$t('Name'), sortable: true, sortDirection: 'desc' },
                     { key: 'created_at', label: this.$t('CreatedAt'), sortable: true, sortDirection: 'desc' },
@@ -125,13 +134,12 @@
                 sortBy: '',
                 sortDesc: false,
                 sortDirection: 'asc',
-                filter: null,
+                filter: '',
                 filterOn: ['name'],
                 addEditObj:{
                     id:0,
                     name: '',
                 },
-                filteredItems: [],
                 infoModalTitle: '',
                 infoModalShow: false,
                 editMode: false,
@@ -139,6 +147,10 @@
             }
         },
         methods: {
+        onFiltered(filter) {
+        let items = this.items;
+        this.itemsFiltered = items.filter(x=>x.name.includes(filter));
+      } ,
             deleteRow(idVal){
                 this.$confirm(this.$t('DeleteConfirmMessage'), this.$t('DeleteConfirmTitle'), {
                     confirmButtonText: this.$t('DeleteConfirmOk'),
@@ -147,14 +159,13 @@
                 }).then(() => {
                     this.$store.dispatch("services/removeData", idVal)
                     .then(_ => {
-                        let index=this.items.findIndex(x=>x.id==idVal);
-                        this.items.splice(index,1);
                         this.$notify.success({
                             duration: 3000,
                             message: this.$t("DeleteSuccessfully"),
                             title: this.$t("Delete"),
                             customClass: "top-center",
                         }); 
+                        this.initData();
                     })
                     .catch(_=>{
                        this.$notify.error({
@@ -167,15 +178,12 @@
                     
                 })
             },
-            onFiltered(filteredItems) {
-                this.pagination.currentPage = 1;
-                this.items = filteredItems;
-            },
             initData() {
                 this.$store
                 .dispatch("services/getData")
                 .then(res => {
                     this.items = res.data;
+                    this.itemsFiltered= this.items;
                 })
                 .catch(error => {
                     if(error.response.status == 500) {
@@ -233,10 +241,10 @@
     },
     computed:{
         totalRowsGeneral(){
-            return this.items.length;
+            return this.itemsFiltered.length;
         },
         totalPagesGeneral(){
-            return this.items.length/this.pagination.perPage;
+            return this.itemsFiltered.length/this.pagination.perPage;
         },
     },
         created() {

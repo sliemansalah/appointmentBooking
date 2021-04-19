@@ -245,3 +245,49 @@ body {
 .el-notification.right {
     right: 40%;
 }
+
+.v-sidebar-menu .vsm-icon {
+    left: unset !important;
+    right: 5px !important;
+}
+.v-sidebar-menu .vsm-title {
+    right: 20px;
+    font-family: Cairo !important;
+}
+
+.app-main__inner {
+    font-family: Cairo !important;
+}
+
+.app-header__logo h4 {
+    font-family: Cairo !important;
+}
+
+.app-header-right button {
+    font-family: Cairo !important;
+}
+
+.el-message-box__title {
+    text-align: right;
+}
+
+.el-message-box__headerbtn {
+right: unset !important;
+left: 15px;
+}
+.el-message-box__container {
+   text-align: right;
+}
+.el-message-box__status+.el-message-box__message {
+    padding-left: 12px;
+    padding-right: 36px;
+}
+.el-message-box__btns button:nth-child(2) {
+    margin-left: unset !important;
+    margin-right: 10px;
+}
+
+.el-button--primary {
+    background-color: var(--gold) !important;
+    border-color: var(--gold) !important;
+}
