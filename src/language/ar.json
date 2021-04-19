@@ -75,5 +75,17 @@
     "Updated": "تحديث",
     "Added": "إضافة",
     "AddedFailed": "فشلت عملية الإضافة",
-    "UpdatedFailed": "فشلت عملية التحديث"
+    "UpdatedFailed": "فشلت عملية التحديث",
+    "UserName": "اسم المستخدم",
+    "BookDate": "تاريخ الحجز",
+    "BookTime": "وقت الحجز",
+    "PersonCount": "عدد المرافقين",
+    "TransactionCount": "عدد المعاملات",
+    "Status": "الحالة",
+    "EmailOrPasswordWasWrong": "البريد الإلكتروني أو كلمة المرور خطأ",
+    "Select": "اختر",
+    "UpdateBookingSuccessfully": "تم تحديث الحجز بنجاح",
+    "AddedBookingSuccessfully": "تم إضافة الحجز بنجاح",
+    "ServiceName": "اسم الخدمة",
+    "Update": "تحديث"
 }

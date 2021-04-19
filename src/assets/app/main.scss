@@ -2,7 +2,7 @@
     --gold: #C09300;
     --black: #000;
     --white: #fff;
-    --red: red
+    --red: #eb2f2f;
 }
 @font-face {
     font-family: dinNext;
@@ -290,4 +290,21 @@ left: 15px;
 .el-button--primary {
     background-color: var(--gold) !important;
     border-color: var(--gold) !important;
+}
+
+.required {
+    color: var(--red);
+    font-weight: bold;
+}
+.help-block {
+    color: var(--red);
+}
+
+.el-button+.el-button {
+    margin-left: unset !important;
+    margin-right: 10px;
+}
+
+.time-select-item {
+    padding: 8px 28px;
 }

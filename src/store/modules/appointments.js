@@ -63,7 +63,7 @@ const actions = {
 
   updateStatus({}, data) {
     return new Promise((resolve, reject) => {
-      window.axios.put(window.server_url + `/api/admin/appointment/`, JSON.parse(data))
+      window.axios.put(window.server_url + `/api/admin/appointment/update_status`, JSON.parse(data))
         .then((response) => {
           resolve(response.data);
         })

@@ -149,7 +149,9 @@
         methods: {
         onFiltered(filter) {
         let items = this.items;
-        this.itemsFiltered = items.filter(x=>x.name.includes(filter));
+      this.itemsFiltered = items.filter((x) => 
+       x.name.toLowerCase().includes(filter.toLowerCase())
+      );
       } ,
             deleteRow(idVal){
                 this.$confirm(this.$t('DeleteConfirmMessage'), this.$t('DeleteConfirmTitle'), {
