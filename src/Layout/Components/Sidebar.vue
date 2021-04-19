@@ -4,7 +4,7 @@
     @mouseleave="toggleSidebarHover('remove','closed-sidebar-open')">
         <div class="app-header__logo">
             <h4 class="mt-2 mr-2">{{$t('BookingSystem')}}</h4>
-            <img class="mr-2" width="20" height="20" src="/assets/images/favicon.png" alt="">
+            <!-- <img class="mr-2" width="20" height="20" src="/assets/images/favicon.png" alt=""> -->
             <!-- <div class="logo-src"/> -->
             <!-- <div class="header__pane ml-auto">
                 <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" 
@@ -15,7 +15,7 @@
                 </button>
             </div> -->
         </div>
-        <div class="app-sidebar-content">
+        <div class="app-sidebar-content pt-4">
             <VuePerfectScrollbar class="app-sidebar-scroll" v-once>
                 <sidebar-menu showOneChild :menu="menu"/>
             </VuePerfectScrollbar>
