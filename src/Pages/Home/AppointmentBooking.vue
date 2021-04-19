@@ -8,6 +8,7 @@
             </div>
            <v-date-picker 
                 v-model="value" 
+                :min="disabledBefore"
                 color="gold lighten-1" 
             >
             </v-date-picker>
@@ -36,6 +37,7 @@ components: {
 },
 data() {
     return {
+        disabledBefore: new Date().toISOString().substr(0, 10),
         value: new Date().toISOString().substr(0, 10),
         value2: '',
         zone: ''
@@ -94,8 +96,8 @@ computed: {
             let finalValue=  this.value + " " + time + ":" + percent;
             return finalValue;
         }
-    }
-}
+    },
+},
 }
 </script>
 
