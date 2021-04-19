@@ -45,30 +45,6 @@
                 </div>
             </div>
             </div>
-            <div class="row mt-3">
-                <div class="col-md-6" v-if="!editMode && !viewMode">
-                <div class="form-group" 
-                    :class="{'has-error':errors.has('addEditValidation.password')}"
-                >
-                    <label class="control-label">{{$t("Password")}}</label>
-                    <label class="required">*</label>
-                    <input type="password" name="password" 
-                        class="form-control" 
-                        v-model="addEditObj.password"
-                        v-validate="'required'" 
-                        data-vv-scope="addEditValidation" 
-                        :data-vv-as="$t('Password')"
-                        :disabled="viewMode"
-                    >
-                    <div 
-                        class="help-block" 
-                        v-if="errors.has('addEditValidation.password')">
-                        {{ errors.first('addEditValidation.password') }}
-                    </div>
-                </div>
-            </div>
-            </div>
-        </div>
 
                    
         <button type="button" class="btn c-ml-2 mb-2 btn-icon btn-secondary float-left"  

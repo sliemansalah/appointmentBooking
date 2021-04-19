@@ -6,12 +6,6 @@
                 <div>
                     <div class="row">
                         <div class="col-md-6">
-                            <span id="addWrapper">
-                                <button  class="btn mb-2 btn-transition btn-outline-primary"  
-                                @click='addNewItem()'>
-                                    {{$t("AddNew")}}
-                                </button>
-                            </span>
                         </div>
                         <div class="col-md-6">
                             <div  class="input-group input-group">
@@ -43,32 +37,10 @@
                             :sort-direction="sortDirection"
                             @filtered="onFiltered">
                         <template v-slot:cell(actions)="row" >
-                            <b-dropdown no-flip :text='$t("Actions")' class="" variant="primary">
-                                <span :id="'editWrapper'+row.index">
-                                    <button type="button"  class="dropdown-item text-primary" 
-                                        @click='editRow(row.item)'>
-                                        {{$t("Edit")}}
-                                    </button>
-                                </span>
-                                <span :id="'copyWrapper'+row.index">
-                                    <button type="button"  class="dropdown-item text-info" 
-                                        @click='copyRow(row.item)'>
-                                        {{$t("Copy")}}
-                                    </button>
-                                </span>
-                                <span :id="'deleteWrapper'+row.index">
-                                    <button type="button"  class="dropdown-item text-danger" 
-                                        @click='deleteRow(row.item.id)'>
-                                        {{$t("Delete")}}
-                                    </button>
-                                </span>
-                                <span :id="'detailsWrapper'+row.index">
-                                    <button type="button"  class="dropdown-item text-success" 
+                                    <b-button variant="success" 
                                         @click='detailsRow(row.item)'>
-                                        {{$t("Details")}}
-                                    </button>
-                                </span>
-                            </b-dropdown>
+                                        {{$t("Services")}}
+                                    </b-button>
                         </template>
                     </b-table>
                     <div class="row">
@@ -114,8 +86,12 @@
             return {
                 items: [],
                 fields: [
-                    { key: 'name', label: this.$t('Name'), sortable: true, sortDirection: 'desc' },
-                    { key: 'created_at', label: this.$t('CreatedAt'), sortable: true, sortDirection: 'desc' },
+                    { key: 'user.name', label: this.$t('UserName'), sortable: true, sortDirection: 'desc' },
+                    { key: 'finish_time', label: this.$t('BookDate'), sortable: true, sortDirection: 'desc' },
+                    { key: 'start_time', label: this.$t('BookTime'), sortable: true, sortDirection: 'desc' },
+                    { key: 'person_number', label: this.$t('PersonCount'), sortable: true, sortDirection: 'desc' },
+                    { key: 'transaction_number', label: this.$t('TransactionCount'), sortable: true, sortDirection: 'desc' },
+                    { key: 'status', label: this.$t('Status'), sortable: true, sortDirection: 'desc' },
                     { key: 'actions', label: this.$t('Actions'),'thStyle':'min-width:10%;','class':'action-column' }
                 ],
                 pagination:{

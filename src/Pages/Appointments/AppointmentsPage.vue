@@ -188,28 +188,25 @@ export default {
     },
       openConfirm(){
       let me= this;
-    //   this.$vs.dialog({
-    //     type:'confirm',
-    //     color: 'danger',
-    //     title: this.$t('Delete'),
-    //     text: this.$t('DeleteQuestion'),
-    //     acceptText:this.$t('Accept'),
-    //     cancelText: this.$t('Cancel'),
-    //     accept: function () {
-    //       me.removeData()
-    //     },
-    // })
+     this.$confirm(me.$t('DeleteConfirmMessage'), me.$t('DeleteConfirmTitle'), {
+            confirmButtonText: this.$t('DeleteConfirmOk'),
+            cancelButtonText: this.$t('DeleteConfirmCancel'),
+            type: 'warning'
+        }).then((res) => {
+          if(res) {
+            me.removeData();
+          }
+      });
     },
     removeData() {
         this.$store.dispatch('appointments/removeData', parseInt(this.id)).then(res => {
           this.serviceModal= false;
-        //     this.$vs.notify({
-        //       title:this.$t('Deleted'),
-        //       text: this.$t('DeletedSuccessfully'),
-        //       color:'success',
-        //       position: 'top-center',
-        //       time:4000,
-        //   })
+           this.$notify.success({
+              duration: 3000,
+              message: this.$t("DeleteSuccessfully"),
+              title: this.$t("Delete"),
+              customClass: "top-center",
+            }); 
           this.appointmentsModal = false;
           this.initData();
         })
@@ -220,6 +217,7 @@ export default {
       dataToSend.id = parseInt(this.id);
       dataToSend.start_time= moment(this.date).format("YYYY-MM-DD") + ' ' + this.startTime;
       dataToSend.finish_time= moment(this.date).format("YYYY-MM-DD") + ' ' + this.endTime;
+      delete dataToSend.status;
       if(this.editMode) {
         this.$store.dispatch("appointments/updateData", dataToSend).then(res => {
         //    this.$vs.notify({

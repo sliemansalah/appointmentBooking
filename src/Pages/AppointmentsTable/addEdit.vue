@@ -30,7 +30,7 @@
         @click="$emit('closeAddEdit')">
             {{$t("Close")}}
         </button>
-        <b-button type="primary" variant="primary" class="float-left ml-2">
+        <b-button v-if="!viewMode" type="primary" variant="primary" class="float-left ml-2">
             {{$t("Save")}} 
         </b-button>
    
