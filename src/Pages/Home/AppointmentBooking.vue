@@ -18,6 +18,7 @@
                 <span>Confirm Time</span>
             </div>
            <STimePicker 
+                ref="stimePicker"
                 @changeZone="changeZone"
                 @changeTime="changeTime"
             />

@@ -190,7 +190,7 @@
                 .catch(error => {
                     if(error.response.status == 500) {
                         localStorage.removeItem("token");
-                        window.location.href = "/";
+                        window.location.href = "/admin/login";
                     }
                     this.$notify.error({
                         duration: 3000,

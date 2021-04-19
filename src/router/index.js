@@ -35,6 +35,12 @@ export default new Router({
             component: () => import('../Pages/Home/HomePage.vue'),
         },
         {
+            path: '/booking-success',
+            name: 'bookingSuccess',
+            meta: {layout: 'userpages'},
+            component: () => import('../Pages/Home/BookingSuccessPage.vue'),
+        },
+        {
             path: '/admin/login',
             name: 'login',
             meta: {layout: 'userpages'},

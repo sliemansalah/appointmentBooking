@@ -87,5 +87,7 @@
     "UpdateBookingSuccessfully": "تم تحديث الحجز بنجاح",
     "AddedBookingSuccessfully": "تم إضافة الحجز بنجاح",
     "ServiceName": "اسم الخدمة",
-    "Update": "تحديث"
+    "Update": "تحديث",
+    "BookingTimeNotChoose": "لم يتم تحديد وقت الحجز",
+    "BackToHome": "عودة للرئيسية"
 }

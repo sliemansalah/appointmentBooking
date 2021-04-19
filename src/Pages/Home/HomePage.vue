@@ -32,7 +32,7 @@
             <b-nav-item active>{{$t('AppointmentBooking')}}</b-nav-item>
             <b-nav-item href="http://www.palestineembassy.org.sa/Ar_contact_us.htm" target="_blank">{{$t('ContactUs')}}</b-nav-item>
         </b-nav>
-        <AppointmentBooking 
+        <AppointmentBooking ref="appointmentBooking"
         @startTime="startTime= $event"
         @endTime="endTime= $event"
         />
