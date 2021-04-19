@@ -318,6 +318,10 @@ export default {
           this.itemsFiltered = this.items;
         })
         .catch((error) => {
+           if(error.response.status == 500) {
+              localStorage.removeItem("token");
+              window.location.href = "/admin/login";
+          }
           this.$notify.error({
             duration: 3000,
             message: this.$t("GetDataFailed"),
