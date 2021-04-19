@@ -5,7 +5,7 @@
          <div class="col-md-2"></div>
          <div class="col-md-4 ">
              <p class="pr-2">{{$t('FullName')}}</p>
-            <b-input :placeholder="$t('InputFullName')" type="text" v-model="inputs.fullName"></b-input>
+            <b-input :placeholder="$t('InputFullName')" type="text" v-model="inputs.name"></b-input>
          </div>
          <div class="col-md-4 ">
              <p class="pr-2">{{$t('MobileNumber')}}</p>
@@ -21,15 +21,15 @@
          </div>
          <div class="col-md-4 ">
              <p class="pr-2">{{$t('EscortsCount')}}</p>
-            <b-input :placeholder="$t('InputEscortsCount')" type="text" v-model="inputs.escorts"></b-input>
+            <b-input :placeholder="$t('InputEscortsCount')" type="text" v-model.number="inputs.person_number"></b-input>
          </div>
         <div class="col-md-2"></div>
      </div>
-     <div class="row mt-3">
+     <!-- <div class="row mt-3">
          <div class="col-md-2"></div>
          <div class="col-md-4 ">
              <p class="pr-2">{{$t('TransactionsCount')}}</p>
-            <b-input  :placeholder="$t('InputTransactionsCount')" type="text" v-model="inputs.transactions"></b-input>
+            <b-input  :placeholder="$t('InputTransactionsCount')" type="text" v-model="inputs.transaction_number"></b-input>
          </div>
          <div class="col-md-4 ">
              <p class="pr-2">{{$t('TransactionsType')}}</p>
@@ -37,14 +37,43 @@
                 clearable
                 filterable
                 multiple
-                 v-model="inputs.transactionType" 
+                 v-model="inputs.services" 
                  style="width:100%;"
                  :placeholder="$t('SelectTransactionsType')">
                 <el-option
                 v-for="item in transactionsTypes"
-                :key="item.value"
-                :label="item.label"
-                :value="item.value">
+                :key="item.id"
+                :label="item.name"
+                :value="item.id">
+                </el-option>
+            </el-select>
+         </div>
+        <div class="col-md-2"></div>
+     </div> -->
+     <div class="row mt-3">
+         <div class="col-md-2"></div>
+         <div class="col-md-8 ">
+             <p class="pr-2">{{$t('TransactionsCount')}}</p>
+            <b-input  :placeholder="$t('InputTransactionsCount')" type="text" v-model.number="inputs.transaction_number"></b-input>
+         </div>
+        <div class="col-md-2"></div>
+     </div>
+     <div class="row mt-3">
+         <div class="col-md-2"></div>
+         <div class="col-md-8">
+             <p class="pr-2">{{$t('TransactionsType')}}</p>
+             <el-select
+                clearable
+                filterable
+                multiple
+                 v-model="inputs.services" 
+                 style="width:100%;"
+                 :placeholder="$t('SelectTransactionsType')">
+                <el-option
+                v-for="item in transactionsTypes"
+                :key="item.id"
+                :label="item.name"
+                :value="item.id">
                 </el-option>
             </el-select>
          </div>
@@ -56,6 +85,7 @@
             <b-form-group>
             <b-form-textarea
                 rows="4"
+                v-model="inputs.comments"
                 :placeholder="$t('AnotherNotes')"
             ></b-form-textarea>
             </b-form-group>
@@ -65,7 +95,7 @@
      <div class="row">
  <div class="col-md-4"></div>
   <div class="col-md-4">
-      <b-button class="bookConfirmButton">{{$t('BookConfirm')}}</b-button>
+      <b-button @click="addBooking" class="bookConfirmButton">{{$t('BookConfirm')}}</b-button>
   </div>
    <div class="col-md-4"></div>
      </div>
@@ -74,35 +104,51 @@
 
 <script>
 export default {
+props: ["startTime", "endTime"],
 data() {
     return {
         inputs: {
-            fullName: '',
+            name: '',
             mobile: '',
             email: '',
-            escorts: '',
-            transactions: '',
-            transactionType: ''
+            person_number: '',
+            transaction_number: '',
+            services: '',
+            comments: '',
+            start_time: '',
+            finish_time: '',
         },
-        transactionsTypes: [
-            {
-                label: 'إصدار وتجديد جواز السفر الفلسطيني',
-                value: 1
-            },
-            {
-                label: 'إصدار إفادات بتغيير الاسم',
-                value: 2
-            },
-            {
-                label: 'إصدار إفادات الإغاثة',
-                value: 3
-            },
-            {
-                label: 'إصدار إفادات قيد الحياة',
-                value: 4
-            }
-        ]
+        transactionsTypes: []
     }
+},
+methods: {
+    addBooking() {
+        this.inputs.start_time = this.startTime;
+        this.inputs.finish_time = this.endTime;
+        this.$store.dispatch('appointments/saveData2', this.inputs).then(res => {
+            console.log(res);
+        }).catch(err => {
+
+        });
+    },
+    initData() {
+         this.$store
+                .dispatch("services/getData")
+                .then(res => {
+                    this.transactionsTypes = res.data;
+                })
+                .catch(_ => {
+                    this.$notify.error({
+                        duration: 3000,
+                        message: this.$t("GetDataFailed"),
+                        title: this.$t("GetData"),
+                        customClass: "top-center",
+                    }); 
+                });
+    }
+},
+created() {
+    this.initData();
 }
 }
 </script>

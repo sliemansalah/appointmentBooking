@@ -32,10 +32,13 @@
             <b-nav-item active>{{$t('AppointmentBooking')}}</b-nav-item>
             <b-nav-item href="http://www.palestineembassy.org.sa/Ar_contact_us.htm" target="_blank">{{$t('ContactUs')}}</b-nav-item>
         </b-nav>
-        <AppointmentBooking />
+        <AppointmentBooking 
+        @startTime="startTime= $event"
+        @endTime="endTime= $event"
+        />
     </div>
     <div class="container mt-4">
-       <AppointmentAddEdit />
+       <AppointmentAddEdit :startTime="startTime" :endTime="endTime"/>
     </div>
   </div>
 </template>
@@ -47,7 +50,13 @@ export default {
     components: {
         AppointmentBooking,
         AppointmentAddEdit
-    }
+    },
+    data() {
+      return {
+        startTime: '',
+        endTime: '',
+      }
+    },
 };
 </script>
 

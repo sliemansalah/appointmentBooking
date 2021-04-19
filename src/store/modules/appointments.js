@@ -37,6 +37,17 @@ const actions = {
         })
     })
   },
+  saveData2({}, data) {
+    return new Promise((resolve, reject) => {
+        window.axios.post(window.server_url + `/api/admin/add_appointment`, data)
+        .then((response) => {
+          resolve(response.data);
+        })
+        .catch((error) => {
+          reject(error)
+        })
+    })
+  },
 
   updateData({}, data) {
     return new Promise((resolve, reject) => {

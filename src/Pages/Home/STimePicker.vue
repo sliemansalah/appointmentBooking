@@ -39,7 +39,7 @@
                     >
                       <div 
                         :class="value==1?'active': ''" 
-                        @click="value =1"
+                        @click="changeTime(1)"
                         class="v-btn__content">12:00 {{zone}}
                       </div>
                     </button>
@@ -51,7 +51,7 @@
                     >
                        <div 
                         :class="value==2?'active': ''" 
-                        @click="value =2"
+                        @click="changeTime(2)"
                         class="v-btn__content">12:30 {{zone}}
                       </div>
                     </button>
@@ -63,7 +63,7 @@
                     >
                       <div 
                         :class="value==3?'active': ''" 
-                        @click="value =3"
+                        @click="changeTime(3)"
                         class="v-btn__content">01:00 {{zone}}
                       </div>
                     </button>
@@ -75,7 +75,7 @@
                     >
                       <div 
                         :class="value==4?'active': ''" 
-                        @click="value =4"
+                        @click="changeTime(4)"
                         class="v-btn__content">01:30 {{zone}}
                       </div>
                     </button>
@@ -89,7 +89,7 @@
                     >
                       <div 
                         :class="value==5?'active': ''" 
-                        @click="value =5"
+                        @click="changeTime(5)"
                         class="v-btn__content">02:00 {{zone}}
                       </div>
                     </button>
@@ -101,7 +101,7 @@
                     >
                       <div 
                         :class="value==6?'active': ''" 
-                        @click="value =6"
+                        @click="changeTime(6)"
                         class="v-btn__content">02:30 {{zone}}
                       </div>
                     </button>
@@ -113,7 +113,7 @@
                     >
                       <div 
                         :class="value==7?'active': ''" 
-                        @click="value =7"
+                        @click="changeTime(7)"
                         class="v-btn__content">03:00 {{zone}}
                       </div>
                     </button>
@@ -125,7 +125,7 @@
                     >
                       <div 
                         :class="value==8?'active': ''" 
-                        @click="value =8"
+                        @click="changeTime(8)"
                         class="v-btn__content">03:30 {{zone}}
                       </div>
                     </button>
@@ -139,7 +139,7 @@
                     >
                       <div 
                         :class="value==9?'active': ''" 
-                        @click="value =9"
+                        @click="changeTime(9)"
                         class="v-btn__content">04:00 {{zone}}
                       </div>
                     </button>
@@ -151,7 +151,7 @@
                     >
                     <div 
                         :class="value==10?'active': ''" 
-                        @click="value =10"
+                        @click="changeTime(10)"
                         class="v-btn__content">04:30 {{zone}}
                       </div>
                     </button>
@@ -163,7 +163,7 @@
                     >
                       <div 
                         :class="value==11?'active': ''" 
-                        @click="value =11"
+                        @click="changeTime(11)"
                         class="v-btn__content">05:00 {{zone}}
                       </div>
                     </button>
@@ -175,7 +175,7 @@
                     >
                       <div 
                         :class="value==12?'active': ''" 
-                        @click="value =12"
+                        @click="changeTime(12)"
                         class="v-btn__content">05:30 {{zone}}
                       </div>
                     </button>
@@ -189,7 +189,7 @@
                     >
                      <div 
                         :class="value==13?'active': ''" 
-                        @click="value =13"
+                        @click="changeTime(13)"
                         class="v-btn__content">06:00 {{zone}}
                       </div>
                     </button>
@@ -201,7 +201,7 @@
                     >
                       <div 
                         :class="value==14?'active': ''" 
-                        @click="value =14"
+                        @click="changeTime(14)"
                         class="v-btn__content">06:30 {{zone}}
                       </div>
                     </button>
@@ -213,7 +213,7 @@
                     >
                       <div 
                         :class="value==15?'active': ''" 
-                        @click="value =15"
+                        @click="changeTime(15)"
                         class="v-btn__content">07:00 {{zone}}
                       </div>
                     </button>
@@ -225,7 +225,7 @@
                     >
                       <div 
                         :class="value==16?'active': ''" 
-                        @click="value =16"
+                        @click="changeTime(16)"
                         class="v-btn__content">07:30 {{zone}}
                       </div>
                     </button>
@@ -239,7 +239,7 @@
                     >
                       <div 
                         :class="value==17?'active': ''" 
-                        @click="value =17"
+                        @click="changeTime(17)"
                         class="v-btn__content">08:00 {{zone}}
                       </div>
                     </button>
@@ -251,7 +251,7 @@
                     >
                      <div 
                         :class="value==18?'active': ''" 
-                        @click="value =18"
+                        @click="changeTime(18)"
                         class="v-btn__content">08:30 {{zone}}
                       </div>
                     </button>
@@ -263,7 +263,7 @@
                     >
                       <div 
                         :class="value==19?'active': ''" 
-                        @click="value =19"
+                        @click="changeTime(19)"
                         class="v-btn__content">09:00 {{zone}}
                       </div>
                     </button>
@@ -275,7 +275,7 @@
                     >
                       <div 
                         :class="value==20?'active': ''" 
-                        @click="value =20"
+                        @click="changeTime(20)"
                         class="v-btn__content">09:30 {{zone}}
                       </div>
                     </button>
@@ -289,7 +289,7 @@
                     >
                       <div 
                         :class="value==21?'active': ''" 
-                        @click="value =21"
+                        @click="changeTime(21)"
                         class="v-btn__content">10:00 {{zone}}
                       </div>
                     </button>
@@ -301,7 +301,7 @@
                     >
                       <div 
                         :class="value==22?'active': ''" 
-                        @click="value =22"
+                        @click="changeTime(22)"
                         class="v-btn__content">10:30 {{zone}}
                       </div>
                     </button>
@@ -313,7 +313,7 @@
                     >
                      <div 
                         :class="value==23?'active': ''" 
-                        @click="value =23"
+                        @click="changeTime(23)"
                         class="v-btn__content">11:00 {{zone}}
                       </div>
                     </button>
@@ -325,7 +325,7 @@
                     >
                      <div 
                         :class="value==24?'active': ''" 
-                        @click="value =24"
+                        @click="changeTime(24)"
                         class="v-btn__content">11:30 {{zone}}
                       </div>
                     </button>
@@ -352,12 +352,17 @@ export default {
       changeZone() {
           if (this.zone == 'PM' ) {
               this.zone = 'AM';
-              this.value = ''
           }
           else if (this.zone == 'AM' ) {
               this.zone = 'PM';
               this.value = ''
           }
+      },
+      changeTime(value) {
+        this.value = value;
+        this.$emit('changeTime', this.value);
+        this.$emit('changeZone', this.zone);
+
       }
   }
 };

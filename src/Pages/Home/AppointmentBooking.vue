@@ -18,7 +18,8 @@
                 <span>Confirm Time</span>
             </div>
            <STimePicker 
-                v-model="value2" 
+                @changeZone="changeZone"
+                @changeTime="changeTime"
             />
         </div>
        </div>
@@ -28,6 +29,7 @@
 <script>
 import STimePicker from './STimePicker';
 export default {
+props: ["getStartTime", "getEndTime"],
 components: {
     STimePicker
 },
@@ -35,6 +37,62 @@ data() {
     return {
         value: new Date().toISOString().substr(0, 10),
         value2: '',
+        zone: ''
+    }
+},
+methods: {
+    changeZone(value){
+        this.zone= value;
+        this.$emit('startTime', this.getStartTime)
+        this.$emit('endTime', this.getEndTime)
+    },
+    changeTime(value) {
+        this.value2= value;
+        this.$emit('startTime', this.getStartTime)
+        this.$emit('endTime', this.getEndTime)
+    }
+
+},
+computed: {
+    getStartTime(){
+        if(this.zone && this.value2) {
+            let time= parseInt(this.value2) / 2 ;
+            if(this.zone == 'PM') {
+                time =  time + 12 - 0.5;
+            }else {
+                time = time - 0.5
+            }
+            let percent = '00' ;
+            if(time %1 == 0) {
+                percent = '00' ;
+            }else {
+                percent = '30' ;
+            }
+            time= parseInt(time);
+            if(time.length<2) time+="0";
+            let finalValue= this.value + " " + time + ":" + percent;
+            return finalValue;
+        }
+    },
+    getEndTime(){
+        if(this.zone && this.value2) {
+            let time= parseInt(this.value2) / 2 ;
+            if(this.zone == 'PM') {
+                time =  time + 12;
+            }else {
+                time = time
+            }
+            let percent = '00' ;
+            if(time %1 == 0) {
+                percent = '00' ;
+            }else {
+                percent = '30' ;
+            }
+             time= parseInt(time);
+            if(time.length<2) time+="0";
+            let finalValue=  this.value + " " + time + ":" + percent;
+            return finalValue;
+        }
     }
 }
 }
